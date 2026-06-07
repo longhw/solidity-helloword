@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+// import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * @dev 一个完整的NFT合约实现，支持铸造、元数据管理和供应量控制
  * @notice 使用OpenZeppelin库实现标准ERC721功能
  */
-contract MyNFT is ERC721, ERC721URIStorage, Ownable {
+contract MyNFT is ERC721URIStorage, Ownable {
     // Token ID计数器
     uint256 private _tokenIdCounter;
     
@@ -73,14 +73,14 @@ contract MyNFT is ERC721, ERC721URIStorage, Ownable {
      * @return 元数据URI
      * @notice 需要重写以解决多重继承的冲突
      */
-    function tokenURI(uint256 tokenId)
-        public
-        view
-        override(ERC721, ERC721URIStorage)
-        returns (string memory)
-    {
-        return super.tokenURI(tokenId);
-    }
+    // function tokenURI(uint256 tokenId)
+    //     public
+    //     view
+    //     override(ERC721URIStorage)
+    //     returns (string memory)
+    // {
+    //     return super.tokenURI(tokenId);
+    // }
     
     /**
      * @dev 检查接口支持
@@ -88,14 +88,14 @@ contract MyNFT is ERC721, ERC721URIStorage, Ownable {
      * @return 是否支持该接口
      * @notice 实现ERC165标准，支持接口查询
      */
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(ERC721, ERC721URIStorage)
-        returns (bool)
-    {
-        return super.supportsInterface(interfaceId);
-    }
+    // function supportsInterface(bytes4 interfaceId)
+    //     public
+    //     view
+    //     override(ERC721URIStorage)
+    //     returns (bool)
+    // {
+    //     return super.supportsInterface(interfaceId);
+    // }
     
     /**
      * @dev 查询总供应量
