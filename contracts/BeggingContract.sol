@@ -33,7 +33,7 @@ contract BeggingContract {
         require(msg.value > 0, "donation amount must be greater than zero");
         require(block.timestamp < expiredTime, "donation period has expired");
         
-        donatorAmount[msg.sender] = msg.value;
+        donatorAmount[msg.sender] += msg.value;
 
         emit donation(msg.sender, msg.value);
     }
