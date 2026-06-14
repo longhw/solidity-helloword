@@ -26,7 +26,7 @@ import "@openzeppelin/contracts/interfaces/IERC2981.sol";
  * @dev 完整的NFT交易市场合约，支持上架、购买、版税和拍卖功能
  * @notice 使用ReentrancyGuard防止重入攻击
  */
-contract NFTMarketplace is ReentrancyGuard {
+contract NFTMarket is ReentrancyGuard {
     
     /**
      * @dev 挂单结构体
